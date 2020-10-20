@@ -1,0 +1,108 @@
+html {
+    height: 100%;
+    overflow-y: hidden;
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(211,211,211,1) 100%); 
+}
+
+body {
+    margin: 30vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+}
+
+.profile {
+    width: 10rem;
+    height: 10rem;
+    background-color: grey;
+    background-image: url("resources/profile.jpg");
+    background-size: cover;
+    margin: 100px;
+    
+    animation: zoomIn;
+    animation-duration: 1.5s;
+}
+
+.driveone {
+    left: -5rem;
+    top: -1.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s
+}
+
+.instagram {
+    top: -5.5rem;
+    left: 2.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s
+}
+
+.drivetwo {
+    right: -5rem;
+    top: -1.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s
+}
+
+
+.facebook {
+    left: -5rem;
+    bottom: -1.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s
+}
+
+.wattpad {
+    bottom: -5.5rem;
+    left: 2.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s
+}
+
+.twitter {
+    right: -5rem;
+    bottom: -1.5rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s
+}
+
+.link {
+    opacity: 0;
+    padding: 0.5rem;
+}
+
+
+.link:hover {
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
