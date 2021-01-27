@@ -1,15 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-    height: 100%;
-    overflow-y: hidden;
+    min-height: 100%;
     background: rgb(238,174,202);
-    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(211,211,211,1) 100%); 
+    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(211,211,211,1) 100%);
+	
+	font-family: sans-serif;
+	font-size: 10px;
+	text-align: center;
 }
 
 body {
-    margin: 30vh auto;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+h1 {
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	font-weight: 300;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.ring {
+	width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+	grid-area: ring-area;
 }
 
 .circle {
@@ -18,8 +40,8 @@ body {
 }
 
 .profile {
-    width: 20vh;
-    height: 20vh;
+    width: 20rem;
+    height: 20rem;
     background-color: grey;
     background-image: url("resources/profile.jpg");
     background-size: cover;
@@ -29,8 +51,8 @@ body {
 }
 
 .driveone {
-    left: -11vh;
-    top: -4vh;
+    left: -8rem;
+    top: -2.5rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -38,8 +60,8 @@ body {
 }
 
 .instagram {
-    top: -12vh;
-    left: 4.8vh;
+    top: -9.5rem;
+    left: 6rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -47,8 +69,8 @@ body {
 }
 
 .drivetwo {
-    right: -11vh;
-    top: -4vh;
+    right: -8rem;
+    top: -2.5rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -57,8 +79,8 @@ body {
 
 
 .facebook {
-    left: -11vh;
-    bottom: -4vh;
+    left: -8rem;
+    bottom: -2.5rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -66,8 +88,8 @@ body {
 }
 
 .wattpad {
-    bottom: -12vh;
-    left: 4.8vh;
+    bottom: -9.5rem;
+    left: 6rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -75,8 +97,8 @@ body {
 }
 
 .twitter {
-    right: -11vh;
-    bottom: -4vh;
+    right: -8rem;
+    bottom: -2.5rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -99,13 +121,47 @@ body {
 	cursor: not-allowed;
 }
 
+.featured {
+	margin: 20px auto;
+	grid-area: featured-area;
+}
+
 @keyframes fadein {
     70% {
-        width: 11vh;
-        height: 11vh;
+        width: 10rem;
+        height: 10rem;
     }
     100% {
-        width: 10vh;
-        height: 10vh;
+        width: 8rem;
+        height: 8rem;
     }
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		"ring-area featured-area";
+	}
+	
+	.featured {
+		width: 450px;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 8px;
+	}
+	
+	body {
+		display: grid;
+		grid-template-rows: 350px 1fr;
+		grid-template-areas:
+		"ring-area"
+		"featured-area";
+	}
+	
 }
