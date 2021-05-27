@@ -6,8 +6,6 @@
 html {
     min-height: 100%;
     background: rgb(238,174,202);
-    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(211,211,211,1) 100%);
-	
 	font-family: sans-serif;
 	font-size: 10px;
 	text-align: center;
@@ -26,6 +24,26 @@ h1 {
 	margin-bottom: 10px;
 }
 
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0
+}
+
 .ring {
 	width: 100%;
     display: flex;
@@ -37,6 +55,7 @@ h1 {
 .circle {
     border-radius: 50%;
     position: absolute;
+    z-index: 2;
 }
 
 .profile {
@@ -48,15 +67,7 @@ h1 {
     
     animation: zoomIn;
     animation-duration: 1.5s;
-}
-
-.driveone {
-    left: -8rem;
-    top: -2.5rem;
-    animation: fadein;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 4s
+    z-index: 2;
 }
 
 .instagram {
@@ -65,26 +76,17 @@ h1 {
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s
-}
-
-.drivetwo {
-    right: -8rem;
-    top: -2.5rem;
-    animation: fadein;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s
+    animation-delay: 1.5s;
 }
 
 
 .facebook {
-    left: -8rem;
-    bottom: -2.5rem;
+    left: -10rem;
+    bottom: 6rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 3.5s
+    animation-delay: 3s;
 }
 
 .wattpad {
@@ -93,16 +95,16 @@ h1 {
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 3s
+    animation-delay: 2.5s;
 }
 
 .twitter {
-    right: -8rem;
-    bottom: -2.5rem;
+    right: -10rem;
+    bottom: 6rem;
     animation: fadein;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
 }
 
 .link {
@@ -117,13 +119,10 @@ h1 {
     transition-duration: 0.3s;
 }
 
-.error {
-	cursor: not-allowed;
-}
-
 .featured {
 	margin: 20px auto;
 	grid-area: featured-area;
+    z-index: 2;
 }
 
 @keyframes fadein {
